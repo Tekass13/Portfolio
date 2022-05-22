@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Staatliches&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <a href="#profil"><li class="nav-btn">Profil</li></a>
+                <a href="#competences"><li class="nav-btn">Compétences</li></a>
+                <a href="#realisations"><li class="nav-btn">Réalisation</li></a>
+                <a href="#contact"><li class="nav-btn">Contact</li></a>                                             
+            </ul>
+        </nav>
+        <div class="profil" id="profil">
+            <h1 class="subtitle anim-text1">CARMON Kévin</h1>
+            <h2 class="anim-text2">DEVELOPPEUR FRONT-END</h2>
+            <p class="anim-text3">
+                 Ouvert à toutes opportunitées d'expériences supplémentaires me permettant d'évoluer dans le domaine,
+                  je serais ravi de mettre à contribution mes compétences dans un contexte professionnel, 
+                 et d'en decouvrir d'avantages toute en participant à l'avancement de vos projets.
+            </p>
+        </div>
+    </header>
+
+    <section class="container">
+        <!-- Compétences -->
+        <article class="content" id="competences">
+            <h2>Compétences</h2>
+            <div class="anim-icons">
+                <ion-icon name="logo-html5"></ion-icon>
+                <div class="html"></div>
+                <h3>Html</h3>
+                <ion-icon name="logo-css3"></ion-icon>
+                <div class="css"></div>
+                <h3>Css</h3>
+                <ion-icon name="logo-javascript"></ion-icon>
+                <div class="js"></div>
+                <h3>JavaScript</h3>
+                <ion-icon name="logo-wordpress"></ion-icon>
+                <div class="wp"></div>
+                <h3>Word Press</h3>
+            </div>
+        </article>
+        <!-- Réalisations -->
+        <article class="content" id="realisations">
+            <h2>Réalisations</h2>
+            <div class="box anim-box">
+                <div class="maquette"> 
+                    <a href="https://tekass13.github.io/Maquettes/" target="_blank">
+                        <img src="images/maquette.png" alt="Maquette">
+                    </a>
+                    <h3>Défi maquette</h3>
+                    <p>Cette maquette est un projet que j'ai réalisé suite au visionnage d'une vidéo dont le concept était de relever le défi de réaliser une page d'accueil
+                        sur ce support sans aucune autre ressource que cette maquette (aucune police ni logo ni code couleur fourni) et dans un délai d'une heure.
+                    </p>
+                </div>
+                <div class="gite">
+                    <a href="https://www.gitedeslilas.crevettefutee.fr/les-services/" target="_blank">
+                        <img src="images/gite.png" alt="GîteDesLilas">
+                    </a>
+                    <h3>Le Gîte des lilas</h3>
+                    <p>Ce projet collectif a été réalisé lors de ma formation aux métiers du numérique avec l'AFPA de lorient, 
+                        nous devions créer un site avec Wordpress pour un client fictif selon le cahier des charges élaboré par le formateur.
+                    </p>
+                </div>
+                <div class="games">
+                    <a href="https://tekass13.github.io/Games/" target="_blank">
+                        <img src="images/Jeu.png" alt="Game">
+                    </a>
+                    <h3>Mini jeu[Javascript]</h3>
+                    <p>Un mini jeu de "casse-brique" pour s'exercer à l'utilisation du langage Javascript.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-bg">
+            <span class="icons">
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon name="logo-twitter"></ion-icon>
+            </span>
+            <span class="copyright">
+                <p>&copy; Created by Carmon Kévin<br>Cette page à été entièrement réalisé avec<br>
+                    <strong>Visual Studio Code (IDE)</strong>.</p>
+            </span>
+            <span class="num">
+                <ion-icon name="phone-portrait-sharp"></ion-icon>
+                <p class="hidden">07.68.84.48.09</p>
+            </span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <!-- Initialisation des Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

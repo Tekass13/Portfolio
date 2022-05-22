@@ -1,0 +1,486 @@
+:root {
+    --Orange: rgb(248, 164, 54);
+    --Grey: rgb(10, 10, 10);
+    --LightGrey: rgba(25, 25, 25, .5);
+    --Speed: .5s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    background: var(--Grey);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 150px 5%;
+}
+
+header::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url('images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+section {
+    background: var(--Grey);
+}
+
+.profil {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 40px;
+    color:white;
+    padding-top: 50px;
+}
+
+header h2 {
+    font-size: 95px;
+    color:var(--Orange);
+    background:rgba(0, 0, 0, .7);
+    width: max-content;
+    padding: 0 10px;
+}
+
+.subtitle {
+  color: white;
+  font-size: 2rem;
+}
+
+header p {
+    color:white;
+    padding-right: 50%;
+}
+
+.anim-text1 {
+    opacity: 0;
+    transform: translateY(-3rem);
+}
+
+.anim-text2 {
+    opacity: 0;
+    transform: translateX(-10rem);
+}
+
+.anim-text3 {
+    opacity: 0;
+    transform: translateY(5rem);
+}
+
+.anim-text-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 1s;
+}
+
+h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 65px;
+}
+
+h3 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid var(--Orange);
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+a:active {
+    scroll-behavior: smooth;
+}
+
+li:hover {
+    color:var(--Grey);
+    transition: color .5s ease;
+}
+
+li {
+    list-style: none;
+    color: white;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px black;
+    transition: color .5s ease;
+    
+}
+
+nav {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 20vh;
+    background: var(--LightGrey);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+    margin: 20px 0;
+}
+
+.nav-btn {
+    padding: 10px 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.content {
+    color: white;
+    border-top: 1px solid rgba(150, 150, 150, .5);
+    border-bottom: 1px solid rgba(150, 150, 150, .5);
+}
+
+#competences {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    background: var(--LightGrey);
+    width: 80%;
+}
+
+#competences h2 {
+    background: linear-gradient(rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+    border-radius: 5px;
+}
+
+#competences ion-icon {
+    width: 100px;
+    height: 100px;
+    padding: 60px 20px;
+    transition: color .5s ease;
+}
+
+#competences ion-icon:nth-last-child(1):hover {
+    color:rgb(59, 124, 199);
+    transition: color .5s ease;
+}
+
+#competences ion-icon:nth-last-child(2):hover {
+    color:rgb(216, 143, 33);
+    transition: color .5s ease;
+}
+
+#competences ion-icon:nth-last-child(3):hover {
+    color:rgb(33, 91, 216);
+    transition: color .5s ease;
+}
+
+#competences ion-icon:nth-last-child(4):hover {
+    color:rgb(216, 122, 33);
+    transition: color .5s ease;
+}
+
+.html, .css, .js, .wp {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.html {
+    animation: css-anim 1s linear .5s forwards;
+}
+.css {
+    animation: css-anim 1s linear 1s forwards;
+}
+
+.js, .wp {
+    animation: js-anim 1s linear 1.5s forwards;
+}
+
+.wp {
+    animation: js-anim 1s linear 2s forwards;
+}
+
+@keyframes html-anim {
+    0% {
+        background: linear-gradient(rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+        width: 0%;
+        height: 50px;
+    }
+    100% {
+        background: linear-gradient(rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+        box-shadow: 2px 2px 5px black;
+        width: 70%;
+        height: 50px;
+    }
+}
+@keyframes css-anim {
+    0% {
+        background: linear-gradient(rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+        width: 0;
+        height: 50px;
+    }
+    100% {
+        background: linear-gradient(rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+        box-shadow: 2px 2px 5px black;
+        width: 60%;
+        height: 50px;
+    }
+}
+@keyframes js-anim {
+    0% {
+        background: linear-gradient(rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+        width: 0;
+        height: 50px;
+    }
+    100% {
+        background: linear-gradient(rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+        box-shadow: 2px 2px 5px black;
+        width: 50%;
+        height: 50px;
+    }
+}
+
+.anim-icons {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-5rem);
+}
+
+.anim-icons-visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition-duration: 1s;
+}
+
+#realisations {  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#realisations h2 {
+    padding-top: 50px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding: 50px;
+    text-align: center;
+}
+
+.anim-box {
+    opacity: 0;
+    transform: translateY(5rem);
+}
+
+.anim-box-visible {
+    opacity: 1;
+    transform: translateY(0rem);
+    transition-duration: 1s;
+}
+
+.maquette, .gite, .games {
+    padding: 50px;
+    border: 10px solid var(--LightGrey);
+}
+
+.maquette p, .gite p, .games p {
+    padding-top: 10px;
+}
+
+.maquette img, .gite img, .games img {
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.copyright p {
+    padding: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
+
+.icons ion-icon {
+    text-align: left;
+    padding: 0 20px;
+    font-size: 50px;
+    color: rgb(50, 50, 50);
+    transition: color .5s ease;
+}
+
+.icons ion-icon:hover {
+    color: var(--Orange);
+    transition: color .5s ease;
+}
+
+.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    font-size: 20px;
+    margin: 0 20px;
+    color: black;
+    visibility: hidden;
+}
+
+.num ion-icon {
+    position: absolute;
+    padding: 0 20px;
+    font-size: 50px;
+    color: rgb(50, 50, 50);
+    transform: translateX(15px);
+    transition: 1.5s ease;
+}
+
+.num:hover .hidden {
+    visibility: visible;
+    color: white;
+    transition: color 1s ease;
+    transition-delay: 1s;
+}
+
+.num:hover ion-icon {
+    transform: translateX(-150%);
+    color: var(--Orange);
+    transition: 1.5s ease; 
+}
+
+footer {
+    background:rgba(0, 0, 0, .9);
+    padding: 50px 0;
+}
+
+.footer-bg {
+    display:inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background:rgba(0, 0, 0, .7);
+}
+
+@media screen and (max-width: 1280px) {
+    .profil h1 {
+        font-size: 30px;
+    }
+    .profil h2 {  
+        font-size: 70px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        text-align: center;
+    }
+    body {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .profil h2 {  
+        font-size: 40px;
+    }
+    .hidden {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        display: flex;
+        justify-content: right;
+        background-color: transparent;
+        width: 100%;
+        height: 250px;
+    }
+    .nav:hover {
+        width: 50%;
+        background: linear-gradient(to left, rgb(248, 164, 54) 3%, rgb(206, 129, 29) 6%, rgb(170, 96, 0) 8%, rgb(0, 0, 0) 10%, rgba(0, 0, 0, .7) 10%);
+        transition: .5s ease-in-out;
+    }
+    .nav:hover li:hover {
+        color: var(--Orange);
+    }
+    .nav {
+        margin: 0;
+        justify-content: right;
+        flex-direction: column;
+        background: linear-gradient(to left, rgb(248, 164, 54) 30%, rgb(206, 129, 29) 60%, rgb(170, 96, 0) 90%, rgb(0, 0, 0) 100%);
+        width: 5%;
+        transition: .5s ease-in-out;
+    }
+    .profil h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    #competences ion-icon {
+        width: 70px;
+        height: 70px;
+    }
+    .footer {
+        display:flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    .hidden {
+        font-size: 13px;
+    }
+    .icons ion-icon, .num ion-icon {
+        width: 40px;
+        padding:0;   
+    }
+}
